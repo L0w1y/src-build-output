@@ -1,0 +1,44 @@
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+<waflib.extras.clang_compilation_database.ClangDbContext object at 0x7f0d7877c9d0>
+Build commands will be stored in build/compile_commands.json
+Traceback (most recent call last):
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Scripting.py", line 163, in waf_entry_point
+    run_commands()
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Scripting.py", line 259, in run_commands
+    ctx = run_command(cmd_name)
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Scripting.py", line 243, in run_command
+    ctx.execute()
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Scripting.py", line 586, in execute
+    return execute_method(self)
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Build.py", line 235, in execute
+    self.execute_build()
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/extras/clang_compilation_database.py", line 133, in new_execute_build
+    Scripting.run_command('clangdb')
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Scripting.py", line 243, in run_command
+    ctx.execute()
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/extras/clang_compilation_database.py", line 119, in execute
+    self.write_compilation_database()
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/extras/clang_compilation_database.py", line 47, in write_compilation_database
+    root = database_file.read_json()
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Node.py", line 244, in read_json
+    return json.loads(self.read(encoding=encoding), object_pairs_hook=object_pairs_hook)
+  File "/usr/lib/python2.7/json/__init__.py", line 352, in loads
+    return cls(encoding=encoding, **kw).decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+    obj, end = self.scan_once(s, idx)
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Node.py", line 240, in object_pairs
+    return dict((str(pair[0]), convert(pair[1])) for pair in pairs)
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Node.py", line 240, in <genexpr>
+    return dict((str(pair[0]), convert(pair[1])) for pair in pairs)
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Node.py", line 233, in convert
+    return [convert(element) for element in value]
+  File "/home/desktop/Рабочий стол/source/srceng-android/source-engine/.waf-2.0.22-a21fa92a45548e4c642deabae50eb159/waflib/Node.py", line 235, in convert
+    return str(value)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 14-20: ordinal not in range(128)
